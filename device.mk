@@ -65,6 +65,11 @@ PRODUCT_PACKAGES += \
 # NDK
 NEED_AIDL_NDK_PLATFORM_BACKEND := true
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResTarget \
+    WifiResTarget
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
