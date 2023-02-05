@@ -62,6 +62,9 @@ PRODUCT_PACKAGES += \
     init.xiaomi.rc \
     ueventd-odm.rc
 
+# NDK
+NEED_AIDL_NDK_PLATFORM_BACKEND := true
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
