@@ -55,8 +55,12 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES  := true
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 # HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(DEVICE_PATH)/configs/vintf/framework_matrix_xiaomi.xml
+
 DEVICE_MANIFEST_FILE += \
-    $(DEVICE_PATH)/configs/vintf/manifest_taro.xml
+    $(DEVICE_PATH)/configs/vintf/manifest_taro.xml \
+    $(DEVICE_PATH)/configs/vintf/manifest_xiaomi.xml
 
 # Kernel
 BOARD_KERNEL_PAGESIZE := 4096
