@@ -59,6 +59,14 @@ PRODUCT_COPY_FILES += \
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# QTI
+TARGET_COMMON_QTI_COMPONENTS := \
+    all \
+    charging \
+    dsprpcd \
+    keymaster \
+    qseecomd
+
 # Shipping API level
 BOARD_API_LEVEL := 31
 BOARD_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
