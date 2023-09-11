@@ -42,6 +42,16 @@ TARGET_BOARD_PLATFORM := taro
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl-qti \
+    android.hardware.boot@1.2-impl-qti.recovery \
+    android.hardware.boot@1.2-service
+
+# Init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -49,7 +59,3 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 BOARD_API_LEVEL := 31
 BOARD_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
-
-# Init
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
